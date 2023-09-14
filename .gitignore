@@ -1,0 +1,7 @@
+.git/
+node_modules/
+dist/
+.hurx/
+yarn.lock
+package-lock.json
+/res/frontend
