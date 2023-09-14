@@ -3,6 +3,12 @@
         "start": "npx ts-node ../../library/framework/apps/frontend/webpack/server"
     },
     "dependencies": {
+        "@hurx/core": "file:../..",
+        "esbuild": "^0.19.3",
+        "file-loader": "^6.2.0",
         "ws": "^8.14.1"
+    },
+    "devDependencies": {
+        "tsconfig-paths-webpack-plugin": "^4.1.0"
     }
 }

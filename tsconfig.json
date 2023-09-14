@@ -1,0 +1,49 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "types": [
+            "node"
+        ],
+        "module": "commonjs",
+        "target": "es2020",
+        "lib": [
+            "ES2020",
+            "DOM"
+        ],
+        "sourceMap": true,
+        "rootDir": "./",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "skipLibCheck": true,
+        "isolatedModules": false,
+        "experimentalDecorators": true,
+        "typeRoots": [
+            "./node_modules/@types",
+            "./src/library/engine/env",
+            "./node_modules/@hurx/core/tsx",
+            "./src"
+        ],
+        "outDir": "./dist",
+        "declaration": true,
+        "declarationDir": "./dist",
+        "declarationMap": true,
+        "preserveSymlinks": true,
+        "jsx": "react",
+        "jsxFactory": "VDOM.createNode",
+        "jsxFragmentFactory": "VDOM.createNode"
+    },
+    "include": [
+        "./src/**/*.ts",
+        "./src/**/*.tsx",
+        "./src/**/*.d.ts",
+        "./src/**/*.d.tsx",
+        "./node_modules/@hurx/core/tsx/jsx.d.ts"
+    ],
+    "ts-node": {
+        "files": true
+    },
+    "exclude": [
+        "dist"
+    ]
+}

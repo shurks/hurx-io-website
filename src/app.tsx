@@ -1,29 +1,16 @@
-import Component, { ComponentProps } from "../../../library/framework/apps/frontend/components/component/component"
-import VDOM from "../../../library/framework/apps/frontend/vdom/vdom"
+import Component from "@hurx/core/library/framework/apps/frontend/components/component/component"
+import VDOM from "@hurx/core/library/framework/apps/frontend/vdom/vdom"
+import Button from "./components/button/button"
+import Logo from "./logo.svg"
 
-interface ButtonProps extends ComponentProps {
-    onClick: () => void
-}
-
-class Button extends Component<ButtonProps> {
-    public render() {
-        return (
-            <button class="button" onClick={() => {
-                this.props.onClick()
-            }}>
-                {
-                    this.props.children
-                }
-            </button>
-        )
-    }
-}
-
-interface AppState {
+export interface AppState {
     clicks: number
 }
 
-class App extends Component<any, AppState> {
+/**
+ * This component is the entry point for the application.
+ */
+export default class App extends Component<any, AppState> {
     constructor(props: any) {
         super(props)
         this.state = {
@@ -34,7 +21,10 @@ class App extends Component<any, AppState> {
         return (
             <div id="app">
                 <div id="app-title">
-                    Hello there, you clicked {this.state.clicks} times!
+                    <img src={Logo} />
+                </div>
+                <div id="app-click-count">
+                    You clicked {this.state.clicks} times!
                 </div>
                 <div id="app-button">
                     <Button onClick={() => {
