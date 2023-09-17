@@ -1,10 +1,35 @@
-html, * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+@import "./mixins.scss";
+
+* {
+    @include selection {
+        background: #F13C20;
+    }
+
+    @include mobile {
+        @include hide-scrollbars;
+    }
+
+    @include pc {
+        &::-webkit-scrollbar {
+            background: none;
+            width: 8px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: #4056a1;
+            border: none;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: #F13C20;
+    
+            @include box-shadow(0 2px 2px rgba(#f13c20, 0.3));
+        }
+    }
 }
 
 body {
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
     background: orange;
 }

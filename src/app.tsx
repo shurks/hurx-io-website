@@ -1,7 +1,9 @@
-import Component from "@hurx/core/library/framework/apps/frontend/components/component/component"
-import VDOM from "@hurx/core/library/framework/apps/frontend/vdom/vdom"
+import Component from "@hurx/core/src/library/framework/frontend/components/component/component"
+import VDOM from "@hurx/core/src/library/framework/frontend/vdom/vdom"
 import Button from "./components/button/button"
 import Logo from "./logo.svg"
+import './app.scss'
+import './index.scss'
 
 export interface AppState {
     clicks: number
@@ -20,8 +22,8 @@ export default class App extends Component<any, AppState> {
     public render() {
         return (
             <div id="app">
-                <div id="app-title">
-                    <img src={Logo} />
+                <div id="app-title" data-c="12" draggable>
+                    <Logo />
                 </div>
                 <div id="app-click-count">
                     You clicked {this.state.clicks} times!

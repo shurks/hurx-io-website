@@ -1,6 +1,7 @@
-import Component, { ComponentProps } from "@hurx/core/library/framework/apps/frontend/components/component/component"
-import VDOM from "@hurx/core/library/framework/apps/frontend/vdom/vdom"
+import Component, { ComponentProps } from "@hurx/core/src/library/framework/frontend/components/component/component"
+import VDOM from "@hurx/core/src/library/framework/frontend/vdom/vdom"
 import Logo from '../../logo.svg'
+import './button.scss'
 
 /**
  * The props for button

@@ -21,7 +21,7 @@
         "typeRoots": [
             "./node_modules/@types",
             "./src/library/engine/env",
-            "./node_modules/@hurx/core/tsx",
+            "./node_modules/@hurx/core/src",
             "./src"
         ],
         "outDir": "./dist",
@@ -38,7 +38,8 @@
         "./src/**/*.tsx",
         "./src/**/*.d.ts",
         "./src/**/*.d.tsx",
-        "./node_modules/@hurx/core/tsx/jsx.d.ts"
+        "./node_modules/@hurx/core/src/library/framework/frontend/jsx/jsx.d.ts",
+        "./node_modules/@hurx/core/src/library/framework/frontend/webpack/loaders/svg/svg.d.ts"
     ],
     "ts-node": {
         "files": true

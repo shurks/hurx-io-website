@@ -1,14 +1,21 @@
 {
     "scripts": {
-        "start": "npx ts-node ../../library/framework/apps/frontend/webpack/server"
+        "start": "npx ts-node --project ./tsconfig.json ./src/server.ts"
     },
     "dependencies": {
-        "@hurx/core": "file:../..",
-        "esbuild": "^0.19.3",
-        "file-loader": "^6.2.0",
-        "ws": "^8.14.1"
+        "@hurx/core": "file:../core",
+        "esbuild": "^0.19.3"
     },
     "devDependencies": {
+        "css-loader": "^6.8.1",
+        "file-loader": "^6.2.0",
+        "mini-css-extract-plugin": "^2.7.6",
+        "node-sass": "^9.0.0",
+        "sass-loader": "^13.3.2",
+        "stream-http": "^3.2.0",
+        "style-loader": "^3.3.3",
+        "ts-loader": "^9.4.4",
+        "ts-node": "^10.9.1",
         "tsconfig-paths-webpack-plugin": "^4.1.0"
     }
 }
